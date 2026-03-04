@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Spike Originator Model</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<style>
+.diagram {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.node {
+  flex: 1;
+  padding: 20px;
+  border-top: 2px solid #A855F7;
+}
+</style>
+</head>
+<body>
+
+<nav>
+<div class="nav-inner">
+<strong>Rashi Bajpai</strong>
+<div>
+<a href="projects.html">Back to Projects</a>
+</div>
+</div>
+</nav>
+
+<section class="hero">
+<h1>Spike Originator Model</h1>
+<p>
+A hybrid fraud detection engine combining anomaly detection with supervised
+claim-level classification to enhance operational fraud detection in healthcare systems.
+</p>
+</section>
+
+<section class="section">
+
+<div class="card">
+<h2>Problem</h2>
+<p>
+The legacy system flagged providers using unsupervised anomaly detection
+but lacked claim-level precision, resulting in operational inefficiencies.
+</p>
+</div>
+
+<div class="card">
+<h2>Solution</h2>
+<p>
+Integrated supervised ML classification layer over anomaly signals.
+Implemented claim-level scoring and dollar threshold prioritization.
+Established quarterly retraining pipeline.
+</p>
+</div>
+
+<div class="card">
+<h2>Architecture Flow</h2>
+
+<div class="diagram">
+<div class="node">Claims Data</div>
+<div class="node">Feature Engineering</div>
+<div class="node">Anomaly Detection</div>
+<div class="node">Supervised Model</div>
+<div class="node">Risk Scoring</div>
+</div>
+
+</div>
+
+<div class="card">
+<h2>Impact</h2>
+<p>
+• 11% precision improvement  
+• ~$2.7M annual financial impact  
+• 23K+ monthly claims processed  
+• Automated governance dashboards
+</p>
+</div>
+
+</section>
+
+<footer>© 2026 Rashi Bajpai</footer>
+<script src="script.js"></script>
+</body>
+</html>
