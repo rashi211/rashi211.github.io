@@ -1,255 +1,85 @@
+
+Rashi Prior <rashiprior@gmail.com>
+03:57 (1 minute ago)
+to me
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rashi Bajpai | Data Scientist</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<style>
-html { scroll-behavior: smooth; }
-
-body {
-    margin: 0;
-    font-family: 'Inter', sans-serif;
-    background: #f8fafc;
-    color: #111827;
-}
-
-nav {
-    position: sticky;
-    top: 0;
-    background: white;
-    padding: 15px 0;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    z-index: 1000;
-}
-
-.nav-container {
-    max-width: 1000px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav a {
-    margin-left: 20px;
-    text-decoration: none;
-    color: #2563eb;
-    font-weight: 500;
-}
-
-header {
-    padding: 100px 20px;
-    text-align: center;
-    background: linear-gradient(135deg, #1e3a8a, #2563eb);
-    color: white;
-}
-
-header h1 {
-    font-size: 42px;
-    margin-bottom: 10px;
-}
-
-header p {
-    font-size: 18px;
-    max-width: 700px;
-    margin: auto;
-    opacity: 0.95;
-}
-
-.btn {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 12px 28px;
-    background: white;
-    color: #2563eb;
-    border-radius: 30px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background: #e0e7ff;
-}
-
-.section {
-    max-width: 1000px;
-    margin: auto;
-    padding: 80px 20px;
-}
-
-.section h2 {
-    font-size: 28px;
-    margin-bottom: 40px;
-    text-align: center;
-}
-
-.card {
-    background: white;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    margin-bottom: 30px;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.6s ease;
-}
-
-.card.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-}
-
-.project-card img {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 15px;
-}
-
-footer {
-    text-align: center;
-    padding: 40px;
-    background: #111827;
-    color: white;
-}
-</style>
+  <title>Rashi Bajpai | Senior Data Scientist</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <nav>
-<div class="nav-container">
-<div><strong>Rashi Bajpai</strong></div>
-<div>
-<a href="#experience">Experience</a>
-<a href="#projects">Projects</a>
-<a href="#education">Education</a>
-<a href="#contact">Contact</a>
-</div>
-</div>
+  <div class="nav-inner">
+    <strong>Rashi Bajpai</strong>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="experience.html">Experience</a>
+      <a href="projects.html">Projects</a>
+      <a href="skills.html">Skills</a>
+      <a href="education.html">Education</a>
+    </div>
+  </div>
 </nav>
 
-<header>
-<h1>Rashi Bajpai</h1>
-<p>
-Data Scientist with 4 years of experience designing fraud detection and risk analytics systems 
-in high-volume transactional environments. Delivered $2.7M+ annual savings and improved 
-fraud detection TPR from 11% to 55%.
-</p>
-<a class="btn" href="resume.pdf" download>Download Resume</a>
-</header>
+<section class="hero">
+  <h1>Data Scientist</h1>
+  <p class="subtitle">
+    I build production-grade fraud detection systems, intelligent multi-agent AI architectures, 
+    and optimization engines that drive measurable business impact.
+  </p>
 
-<section class="section" id="experience">
-<h2>Experience</h2>
-
-<div class="card">
-<h3>Associate Data Scientist – Optum</h3>
-<p><em>Dec 2024 – Present | Noida, India</em></p>
-<ul>
-<li>Designed hybrid fraud detection systems combining supervised ML and Autoencoder-based anomaly detection.</li>
-<li>Improved True Positive Rate from 11% to 40–55%, tagging ~23K high-risk claims monthly.</li>
-<li>Developed claim-level risk scoring and threshold optimization framework driving ~$2.7M savings.</li>
-<li>Built automated retraining and drift monitoring pipelines for production-grade deployment.</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Analyst – Data Science – Deloitte</h3>
-<p><em>July 2021 – Dec 2024 | Gurugram, India</em></p>
-<ul>
-<li>Built predictive ML models improving forecasting accuracy by 18%.</li>
-<li>Reduced reporting cycle time by 30% via automated ETL pipelines.</li>
-<li>Delivered executive-level dashboards for operational decision-making.</li>
-</ul>
-</div>
-
+  <a class="btn" href="Rashi_Bajpai_Resume.pdf" download>
+    Download Resume
+  </a>
 </section>
 
-<section class="section" id="projects">
-<h2>Selected Projects</h2>
+<div class="container">
 
-<div class="project-grid">
+  <div class="card">
+    <h3>4+ Years Experience in Fraud & Risk Analytics</h3>
+    <p>
+      Specialized in healthcare fraud detection, risk scoring systems, 
+      model monitoring frameworks, and scalable ML deployment.
+    </p>
+  </div>
 
-<div class="card project-card">
-<img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c" alt="">
-<h3>Hybrid Healthcare Fraud Detection</h3>
-<p>Layered ML architecture integrating XGBoost and Autoencoders with precision-recall optimization and model monitoring.</p>
+  <div class="card">
+    <h3>Business Impact Delivered</h3>
+    <ul>
+      <li>Increased fraud TPR from 11% → 55%</li>
+      <li>Flagged 23,000+ high-risk claims monthly</li>
+      <li>Generated ~$2.7M estimated annual savings</li>
+      <li>Designed retraining & drift monitoring pipelines</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Core Focus Areas</h3>
+    <ul>
+      <li>Hybrid ML + Anomaly Detection Systems</li>
+      <li>Multi-Agent LLM Architectures (RAG)</li>
+      <li>Operational Optimization Engines</li>
+      <li>End-to-End Production ML Lifecycle</li>
+    </ul>
+  </div>
+
 </div>
-
-<div class="card project-card">
-<img src="https://images.unsplash.com/photo-1581091870627-3cdd3a77f3c2" alt="">
-<h3>Multi-Agent LLM Diagnosis System</h3>
-<p>RAG-based architecture using ChromaDB and orchestrated agents for intelligent disease symptom assessment.</p>
-</div>
-
-<div class="card project-card">
-<img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" alt="">
-<h3>Claims-to-Reviewer Optimization Engine</h3>
-<p>Similarity-based assignment algorithm optimizing throughput and reviewer performance alignment.</p>
-</div>
-
-<div class="card project-card">
-<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71" alt="">
-<h3>Predictive Forecasting System</h3>
-<p>Ensemble ML forecasting model with cross-validation improving accuracy by 18%.</p>
-</div>
-
-</div>
-</section>
-
-<section class="section" id="education">
-<h2>Education</h2>
-
-<div class="card">
-<h3>MCA – AI & ML</h3>
-<p>Jain University | 2024 | GPA: 9.1</p>
-</div>
-
-<div class="card">
-<h3>BSc – Computer Science, Mathematics & Electronics</h3>
-<p>Mount Carmel College | 2021 | GPA: 8.6</p>
-</div>
-
-</section>
-
-<section class="section" id="contact">
-<h2>Contact</h2>
-
-<div class="card">
-<p>Email: rashibajpai1999@gmail.com</p>
-<p>Phone: +91 9793292468</p>
-<p>LinkedIn: linkedin.com/in/rashibajpai</p>
-<p>GitHub: github.com/rashi211</p>
-</div>
-
-</section>
 
 <footer>
-© 2026 Rashi Bajpai | Data Scientist Portfolio
+  📧 rashibajpai1999@gmail.com |
+  📱 +91 9793292468 |
+  🔗 linkedin.com/in/rashibajpai |
+  💻 github.com/rashi211
+  <br><br>
+  © 2026 Rashi Bajpai
 </footer>
 
-<script>
-const cards = document.querySelectorAll('.card');
-
-window.addEventListener('scroll', () => {
-    cards.forEach(card => {
-        const cardTop = card.getBoundingClientRect().top;
-        if(cardTop < window.innerHeight - 100){
-            card.classList.add('show');
-        }
-    });
-});
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
