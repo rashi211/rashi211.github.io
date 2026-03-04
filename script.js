@@ -1,13 +1,11 @@
-const cards = document.querySelectorAll(".card");
+const elements = document.querySelectorAll(".card");
 
-const observer = new IntersectionObserver(entries => {
+const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
-    if(entry.isIntersecting) {
+    if(entry.isIntersecting){
       entry.target.classList.add("visible");
     }
   });
-}, { threshold: 0.1 });
+}, { threshold: 0.2 });
 
-cards.forEach(card => {
-  observer.observe(card);
-});
+elements.forEach(el => observer.observe(el));
