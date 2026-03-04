@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Disease Diagnosis AI</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<style>
+.diagram {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.node {
+  flex: 1;
+  padding: 20px;
+  border-top: 2px solid #6366F1;
+}
+</style>
+</head>
+<body>
+
+<nav>
+<div class="nav-inner">
+<strong>Rashi Bajpai</strong>
+<div>
+<a href="projects.html">Back to Projects</a>
+</div>
+</div>
+</nav>
+
+<section class="hero">
+<h1>Disease Diagnosis & Claim Validation AI</h1>
+<p>
+A multi-agent LLM workflow using LangChain to analyze patient history,
+symptom mappings and doctor-patient conversations to assist claim adjudication.
+</p>
+</section>
+
+<section class="section">
+
+<div class="card">
+<h2>Problem</h2>
+<p>
+Manual claim validation required clinical cross-checking between diagnosis,
+procedures and patient records — slow and error-prone.
+</p>
+</div>
+
+<div class="card">
+<h2>System Architecture</h2>
+
+<div class="diagram">
+<div class="node">Conversation Agent</div>
+<div class="node">Disease DB Agent</div>
+<div class="node">ICD Coding Agent</div>
+<div class="node">Orchestrator</div>
+<div class="node">Validation Output</div>
+</div>
+
+</div>
+
+<div class="card">
+<h2>Key Features</h2>
+<p>
+• Retrieval-Augmented Generation  
+• Multi-agent orchestration  
+• ICD code mapping  
+• Explainable reasoning output  
+</p>
+</div>
+
+</section>
+
+<footer>© 2026 Rashi Bajpai</footer>
+<script src="script.js"></script>
+</body>
+</html>
