@@ -1,37 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Contact</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Rashi Bajpai</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Rashi Bajpai</a>
+      <div class="nav-links">
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html" class="active">Contact</a>
+        <a href="Rashi_Bajpai_Resume.pdf" class="btn-resume" download>Resume</a>
+      </div>
+    </div>
+  </nav>
 
-<nav>
-<div class="nav-inner">
-<strong>Rashi Bajpai</strong>
-<div>
-<a href="index.html">Home</a>
-</div>
-</div>
-</nav>
+  <main class="contact-main">
+    <h1 class="hero-title">Let's Connect</h1>
+    <p class="hero-bio" style="margin-bottom: 40px;">
+      Open to data science opportunities in fraud analytics, AI systems, and product-driven environments.
+    </p>
 
-<section class="hero">
-<h1>Let’s Build Impactful AI Systems</h1>
-<p>
-Open to senior data science opportunities in fraud analytics,
-AI systems and product-driven environments.
-</p>
+    <div class="contact-links-list">
+      <a href="mailto:rashibajpai1999@gmail.com">📧 rashibajpai1999@gmail.com</a>
+      <a href="https://linkedin.com/in/rashibajpai" target="_blank">💼 LinkedIn</a>
+      <a href="https://github.com/rashi211" target="_blank">💻 GitHub</a>
+    </div>
 
-<a class="btn" href="mailto:rashibajpai1999@gmail.com">Email Me</a>
-</section>
+    <form class="contact-form" action="https://formspree.io/f/placeholder" method="POST">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your name" required>
+      
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="your@email.com" required>
+      
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or opportunity..." required></textarea>
+      
+      <button type="submit" class="btn btn-main">Send Message →</button>
+    </form>
+  </main>
 
-<footer>
-LinkedIn: linkedin.com/in/rashibajpai  
-<br>
-Phone: +91 9793292468
-</footer>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-name">© 2026 Rashi Bajpai</div>
+      <div class="footer-links">
+        <a href="mailto:rashibajpai1999@gmail.com">Email</a>
+        <a href="https://linkedin.com/in/rashibajpai" target="_blank">LinkedIn</a>
+        <a href="https://github.com/rashi211" target="_blank">GitHub</a>
+      </div>
+    </div>
+  </footer>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
