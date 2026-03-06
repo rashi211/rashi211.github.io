@@ -1,78 +1,112 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Disease Diagnosis AI</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
-<style>
-.diagram {
-  margin-top: 80px;
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
-}
-.node {
-  flex: 1;
-  padding: 20px;
-  border-top: 2px solid #6366F1;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disease Diagnosis AI — Case Study | Rashi Bajpai</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Rashi Bajpai</a>
+      <div class="nav-links">
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+        <a href="Rashi_Bajpai_Resume.pdf" class="btn-resume" download>Resume</a>
+      </div>
+    </div>
+  </nav>
 
-<nav>
-<div class="nav-inner">
-<strong>Rashi Bajpai</strong>
-<div>
-<a href="projects.html">Back to Projects</a>
-</div>
-</div>
-</nav>
+  <main class="case-main">
+    <a href="projects.html" class="btn btn-alt" style="margin-bottom: 32px;">← Back to Projects</a>
+    
+    <h1 class="hero-title">Disease Diagnosis AI</h1>
 
-<section class="hero">
-<h1>Disease Diagnosis & Claim Validation AI</h1>
-<p>
-A multi-agent LLM workflow using LangChain to analyze patient history,
-symptom mappings and doctor-patient conversations to assist claim adjudication.
-</p>
-</section>
+    <section class="case-section">
+      <h2>Purpose</h2>
+      <p>
+        This AI workflow supports auditors in validating complex clinical claims. It does not replace human expertise — 
+        it augments it with explainable, evidence-based recommendations.
+      </p>
+    </section>
 
-<section class="section">
+    <section class="case-section">
+      <h2>System Architecture</h2>
+      <img src="disease_diagnosis.png" alt="Architecture Diagram" style="width: 100%; max-width: 1200px; border-radius: 16px; margin: 32px auto; display: block; box-shadow: 0 8px 40px rgba(58,90,64,0.15);">
+      
+      <h3 style="margin-top: 32px; color: var(--accent);">Multi-Agent LLM Pipeline</h3>
+      <p>
+        Built on LangChain's agent framework with GPT-4 as the reasoning backbone. The system orchestrates specialized agents 
+        through a sequential chain, each handling a distinct validation task with structured output parsing.
+      </p>
+      
+      <h3 style="margin-top: 24px; color: var(--accent);">Agent Roles</h3>
+      <p>
+        <strong>Medical History Analyst:</strong> Extracts structured patient data (ICD-10 codes, prior diagnoses, medication history) 
+        from unstructured clinical notes using few-shot prompting and entity extraction.
+      </p>
+      <p>
+        <strong>Symptom-Disease Mapper:</strong> Queries a ChromaDB vector store containing 10K+ symptom-disease relationships 
+        embedded via OpenAI ada-002. Uses cosine similarity thresholding (≥0.82) for retrieval with MMR diversity scoring.
+      </p>
+      <p>
+        <strong>Conversation Analyzer:</strong> Parses doctor-patient transcripts to identify mentioned symptoms, treatment discussions, 
+        and diagnostic reasoning. Outputs JSON-structured evidence with confidence scores.
+      </p>
+      <p>
+        <strong>Validation Synthesizer:</strong> Aggregates outputs from upstream agents, cross-references against ground truth diagnoses, 
+        and generates explainable recommendations with cited evidence chains.
+      </p>
+      
+      <h3 style="margin-top: 24px; color: var(--accent);">RAG Implementation</h3>
+      <p>
+        Retrieval-Augmented Generation pipeline with ChromaDB as the vector store. Documents chunked using recursive text splitting 
+        (chunk_size=1000, overlap=200). Contextual compression applied to reduce token usage while preserving semantic relevance. 
+        Retriever configured with k=5 and reranking via cross-encoder models.
+      </p>
+    </section>
 
-<div class="card">
-<h2>Problem</h2>
-<p>
-Manual claim validation required clinical cross-checking between diagnosis,
-procedures and patient records — slow and error-prone.
-</p>
-</div>
+    <section class="case-section">
+      <h2>Impact</h2>
+      <ul>
+        <li>Faster, more consistent claim validation</li>
+        <li>Auditable reasoning for every decision</li>
+        <li>Validation results benchmarked against ground truth</li>
+        <li>Designed to assist auditors, not replace them</li>
+      </ul>
+    </section>
 
-<div class="card">
-<h2>System Architecture</h2>
+    <section class="case-section">
+      <h2>Tech Stack</h2>
+      <div class="skills-tags">
+        <span>Python</span>
+        <span>LangChain</span>
+        <span>OpenAI GPT-4</span>
+        <span>RAG</span>
+        <span>ChromaDB</span>
+        <span>Streamlit</span>
+      </div>
+    </section>
+  </main>
 
-<div class="diagram">
-<div class="node">Conversation Agent</div>
-<div class="node">Disease DB Agent</div>
-<div class="node">ICD Coding Agent</div>
-<div class="node">Orchestrator</div>
-<div class="node">Validation Output</div>
-</div>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-name">© 2026 Rashi Bajpai</div>
+      <div class="footer-links">
+        <a href="mailto:rashibajpai1999@gmail.com">Email</a>
+        <a href="https://linkedin.com/in/rashibajpai" target="_blank">LinkedIn</a>
+        <a href="https://github.com/rashi211" target="_blank">GitHub</a>
+      </div>
+    </div>
+  </footer>
 
-</div>
-
-<div class="card">
-<h2>Key Features</h2>
-<p>
-• Retrieval-Augmented Generation  
-• Multi-agent orchestration  
-• ICD code mapping  
-• Explainable reasoning output  
-</p>
-</div>
-
-</section>
-
-<footer>© 2026 Rashi Bajpai</footer>
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
