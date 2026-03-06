@@ -1,87 +1,109 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Spike Originator Model</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
-<style>
-.diagram {
-  margin-top: 80px;
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
-}
-.node {
-  flex: 1;
-  padding: 20px;
-  border-top: 2px solid #A855F7;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spike Originator Model — Case Study | Rashi Bajpai</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Rashi Bajpai</a>
+      <div class="nav-links">
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+        <a href="Rashi_Bajpai_Resume.pdf" class="btn-resume" download>Resume</a>
+      </div>
+    </div>
+  </nav>
 
-<nav>
-<div class="nav-inner">
-<strong>Rashi Bajpai</strong>
-<div>
-<a href="projects.html">Back to Projects</a>
-</div>
-</div>
-</nav>
+  <main class="case-main">
+    <a href="projects.html" class="btn btn-alt" style="margin-bottom: 32px;">← Back to Projects</a>
+    
+    <h1 class="hero-title">Spike Originator Model</h1>
 
-<section class="hero">
-<h1>Spike Originator Model</h1>
-<p>
-A hybrid fraud detection engine combining anomaly detection with supervised
-claim-level classification to enhance operational fraud detection in healthcare systems.
-</p>
-</section>
+    <section class="case-section">
+      <h2>The Challenge</h2>
+      <p>
+        Legacy fraud detection flagged too many false positives, overwhelming investigators and missing claim-level precision. 
+        The goal was to reduce noise and surface the riskiest claims for review.
+      </p>
+    </section>
 
-<section class="section">
+    <section class="case-section">
+      <h2>System Architecture</h2>
+      <img src="70135.JPG" alt="Architecture Flow" style="width: 100%; max-width: 1200px; border-radius: 16px; margin: 32px auto; display: block; box-shadow: 0 8px 40px rgba(58,90,64,0.15);">
+      
+      <h3 style="margin-top: 32px; color: var(--accent);">Data Pipeline</h3>
+      <p>
+        Raw claims data flows through a PySpark-based ETL pipeline, performing feature extraction across 40+ behavioral signals 
+        including billing frequency, procedure code distributions, and provider-to-patient ratios. Data is partitioned by 
+        submission date and indexed for efficient retrieval.
+      </p>
+      
+      <h3 style="margin-top: 24px; color: var(--accent);">Hybrid Detection Framework</h3>
+      <p>
+        <strong>Stage 1 — Unsupervised Outlier Detection:</strong> Isolation Forest and DBSCAN identify anomalous claim patterns 
+        at the provider level using Mahalanobis distance metrics. Outlier scores are normalized using Z-score standardization.
+      </p>
+      <p>
+        <strong>Stage 2 — Supervised Classification:</strong> LightGBM classifier trained on 500K+ labeled claims refines predictions. 
+        Features include temporal patterns, dollar thresholds, and historical provider behavior vectors. Hyperparameters optimized via 
+        Optuna with 5-fold stratified cross-validation.
+      </p>
+      <p>
+        <strong>Stage 3 — Score Aggregation:</strong> Ensemble scoring combines unsupervised outlier probabilities with supervised 
+        class probabilities using weighted averaging. Final risk scores ranked and filtered by configurable dollar thresholds.
+      </p>
+      
+      <h3 style="margin-top: 24px; color: var(--accent);">MLOps & Monitoring</h3>
+      <p>
+        Models registered in MLflow with versioning and experiment tracking. Airflow DAGs orchestrate quarterly retraining cycles 
+        with automated data validation, model evaluation against holdout sets, and deployment gates. Tableau dashboards track 
+        precision/recall trends, claim volumes, and estimated savings.
+      </p>
+    </section>
 
-<div class="card">
-<h2>Problem</h2>
-<p>
-The legacy system flagged providers using unsupervised anomaly detection
-but lacked claim-level precision, resulting in operational inefficiencies.
-</p>
-</div>
+    <section class="case-section">
+      <h2>Impact</h2>
+      <ul>
+        <li>11% increase in precision while maintaining recall above 65%</li>
+      </ul>
+    </section>
 
-<div class="card">
-<h2>Solution</h2>
-<p>
-Integrated supervised ML classification layer over anomaly signals.
-Implemented claim-level scoring and dollar threshold prioritization.
-Established quarterly retraining pipeline.
-</p>
-</div>
+    <section class="case-section">
+      <h2>Tech Stack</h2>
+      <div class="skills-tags">
+        <span>Python</span>
+        <span>LightGBM</span>
+        <span>Scikit-learn</span>
+        <span>PySpark</span>
+        <span>SQL</span>
+        <span>Tableau</span>
+        <span>MLflow</span>
+        <span>Airflow</span>
+      </div>
+    </section>
+  </main>
 
-<div class="card">
-<h2>Architecture Flow</h2>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-name">© 2026 Rashi Bajpai</div>
+      <div class="footer-links">
+        <a href="mailto:rashibajpai1999@gmail.com">Email</a>
+        <a href="https://linkedin.com/in/rashibajpai" target="_blank">LinkedIn</a>
+        <a href="https://github.com/rashi211" target="_blank">GitHub</a>
+      </div>
+    </div>
+  </footer>
 
-<div class="diagram">
-<div class="node">Claims Data</div>
-<div class="node">Feature Engineering</div>
-<div class="node">Anomaly Detection</div>
-<div class="node">Supervised Model</div>
-<div class="node">Risk Scoring</div>
-</div>
-
-</div>
-
-<div class="card">
-<h2>Impact</h2>
-<p>
-• 11% precision improvement  
-• ~$2.7M annual financial impact  
-• 23K+ monthly claims processed  
-• Automated governance dashboards
-</p>
-</div>
-
-</section>
-
-<footer>© 2026 Rashi Bajpai</footer>
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
