@@ -1,49 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Projects</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Rashi Bajpai</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Rashi Bajpai</a>
+      <div class="nav-links">
+        <a href="about.html">About</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="contact.html">Contact</a>
+        <a href="Rashi_Bajpai_Resume.pdf" class="btn-resume" download>Resume</a>
+      </div>
+    </div>
+  </nav>
 
-<nav>
-<div class="nav-inner">
-<strong>Rashi Bajpai</strong>
-<div>
-<a href="index.html">Home</a>
-<a href="projects.html">Projects</a>
-</div>
-</div>
-</nav>
+  <main class="projects-main">
+    <h1 class="hero-title">Projects</h1>
+    
+    <div class="projects-list">
+      <section class="project-block">
+        <span class="project-tag">Fraud Detection</span>
+        <h2>Spike Originator Model</h2>
+        <p>
+          A hybrid fraud detection engine combining unsupervised anomaly detection with supervised claim-level classification. 
+          Designed to reduce false positives and help investigators focus on high-risk claims using LightGBM.
+        </p>
+        <a href="project-spike.html" class="btn btn-alt">Read Case Study →</a>
+      </section>
 
-<section class="section">
-<h2>Selected Work</h2>
+      <section class="project-block">
+        <span class="project-tag">AI / LLM</span>
+        <h2>Disease Diagnosis AI</h2>
+        <p>
+          Multi-agent LLM workflow that supports auditors in validating clinical claims. Features ground truth validation, 
+          explainable reasoning, and is designed to assist — not replace — human expertise.
+        </p>
+        <a href="project-diagnosis.html" class="btn btn-alt">Read Case Study →</a>
+      </section>
+    </div>
+  </main>
 
-<div class="split">
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-name">© 2026 Rashi Bajpai</div>
+      <div class="footer-links">
+        <a href="mailto:rashibajpai1999@gmail.com">Email</a>
+        <a href="https://linkedin.com/in/rashibajpai" target="_blank">LinkedIn</a>
+        <a href="https://github.com/rashi211" target="_blank">GitHub</a>
+      </div>
+    </div>
+  </footer>
 
-<div class="card">
-<h3>Spike Originator Model</h3>
-<p>
-Hybrid fraud detection architecture combining unsupervised anomaly detection
-with supervised classification to improve claim-level precision and operational impact.
-</p>
-<a class="btn" href="project-spike.html">View Case Study</a>
-</div>
-
-<div class="card">
-<h3>Disease Diagnosis & Claim Validation</h3>
-<p>
-LangChain-based AI workflow analyzing symptom-disease mapping,
-patient history and conversation notes for claim adjudication support.
-</p>
-<a class="btn" href="project-diagnosis.html">View Case Study</a>
-</div>
-
-</div>
-</section>
-
-<footer>© 2026 Rashi Bajpai</footer>
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
